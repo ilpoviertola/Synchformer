@@ -9,3 +9,4 @@ temp
 *.pyth
 todel
 .vscode
+conda_env
