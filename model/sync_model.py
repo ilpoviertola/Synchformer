@@ -6,7 +6,7 @@ import einops
 import torch
 from torch.nn import functional as F
 
-sys.path.insert(0, ".")  # nopep8
+sys.path.insert(0, "./submodules/Synchformer")  # nopep8
 from utils.utils import instantiate_from_config
 from model.modules.transformer import Block, Config
 

@@ -9,7 +9,7 @@ import logging
 import torchaudio
 import torchvision
 
-from utils.utils import get_fixed_off_fname
+from submodules.Synchformer.utils.utils import get_fixed_off_fname
 
 
 def get_fixed_offsets(transforms, split, splits_path, dataset_name):
