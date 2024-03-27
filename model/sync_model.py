@@ -45,6 +45,7 @@ class Synchformer(torch.nn.Module):
         vis_mask: torch.Tensor = None,
         aud_mask: torch.Tensor = None,
         loss_fn=None,
+        return_embs=False,
     ):
         """
         Args:
@@ -60,6 +61,9 @@ class Synchformer(torch.nn.Module):
         """
         vis = self.extract_vfeats(vis, for_loop, vis_mask=vis_mask)
         aud = self.extract_afeats(aud, for_loop, aud_mask=aud_mask)
+
+        if return_embs:
+            return vis, aud
 
         vis = self.vproj(vis)
         aud = self.aproj(aud)
